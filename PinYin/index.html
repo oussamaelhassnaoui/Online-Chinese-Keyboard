@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinyin to Chinese Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="brushstroke brush-1"></div>
+        <div class="brushstroke brush-2"></div>
+        <div class="logo">
+            <h1>拼音 PinYin</h1>
+            <!-- Theme toggle button -->
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="input-section">
+                <div class="input-wrapper">
+                    <textarea id="pinyin-input" placeholder="Type or paste Pinyin here (e.g. wo3 hao3 shi4 jie4)"></textarea>
+                </div>
+                <button id="convert-btn">Convert</button>
+            </div>
+            
+            <div class="output-section">
+                <div class="output-header">
+                    <h2>Chinese Output</h2>
+                    <div class="output-actions">
+                        <button id="copy-btn" class="action-btn">Copy</button>
+                        <button id="google-btn" class="action-btn">Google</button>
+                        <button id="youtube-btn" class="action-btn">YouTube</button>
+                    </div>
+                </div>
+                <div id="chinese-output" class="output-display">
+                    <p class="placeholder">Chinese characters will appear here</p>
+                </div>
+                <!-- Vertical suggestions container -->
+                <div id="vertical-suggestions" class="vertical-suggestions hidden">
+                    <h3>Suggestions:</h3>
+                    <ul id="vertical-suggestions-list"></ul>
+                </div>
+            </div>
+            
+            <div class="instructions">
+                <h3>How to use:</h3>
+                <ul>
+                    <li>Type Pinyin with tone numbers (e.g., "ni3 hao3")</li>
+                    <li>Or type Pinyin without tones (e.g., "ni hao")</li>
+                    <li>Supports thousands of Chinese words and phrases</li>
+                    <li>Powered by the CC-CEDICT dictionary (120,000+ entries)</li>
+                    <li>Real-time suggestions as you type</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pinyin conversion library -->
+    <script src="https://cdn.jsdelivr.net/npm/pinyin-pro@3.19.6/dist/index.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

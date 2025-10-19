@@ -2,3 +2,8 @@ User-agent: *
 Allow: /
 
 Sitemap: https://chinesekeyboard.online/sitemap.xml
+
+# Prevent crawling of common unnecessary files
+Disallow: /*.json$
+Disallow: /*.md$
+Disallow: /PinYin/

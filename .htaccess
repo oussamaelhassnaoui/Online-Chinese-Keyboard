@@ -1,0 +1,7 @@
+# Enable rewrite engine
+RewriteEngine On
+
+# Route all requests through server.js for processing
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ server.js [L,QSA]

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virtual Chinese Keyboard - Online Chinese Keyboard - chinesekeyboard.online</title>
-    <meta name="description" content="Free online Chinese keyboard at chinesekeyboard.online for typing Chinese characters without software. Features Pinyin input, copy text, Google search, YouTube search, and dark mode. Perfect for learning Mandarin Chinese.">
-    <meta name="keywords" content="virtual chinese keyboard, online chinese keyboard, type chinese online, chinese characters, pinyin keyboard, 在线中文键盘, 拼音键盘, free chinese keyboard, mandarin typing, chinese input method, learn chinese, chinese translator, pinyin input, chinese text editor, chinesekeyboard.online">
+    <title>Chinese Keyboard - Online Chinese Keyboard - chinesekeyboard.online</title>
+    <meta name="description" content="Best free online Chinese keyboard for typing Chinese characters. Features Pinyin input, stroke recognition, and character conversion. Perfect for learning Mandarin and typing in Chinese without software.">
+    <meta name="keywords" content="chinese keyboard, online chinese keyboard, type chinese online, chinese characters, pinyin keyboard, 在线中文键盘, 拼音键盘, free chinese keyboard, mandarin typing, chinese input method, learn chinese, chinese translator, pinyin input, chinese text editor, chinesekeyboard.online">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,17 +16,19 @@
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
-      "name": "Online Chinese Keyboard - 在线中文键盘",
-      "description": "Free online Chinese keyboard at chinesekeyboard.online for typing Chinese characters without software. Features Pinyin input, copy text, Google search, YouTube search, and dark mode. Perfect for learning Mandarin Chinese.",
+      "name": "Chinese Keyboard - Online Chinese Keyboard",
+      "description": "Best free online Chinese keyboard for typing Chinese characters. Features Pinyin input, stroke recognition, and character conversion. Perfect for learning Mandarin and typing in Chinese without software.",
       "applicationCategory": "BrowserApplication",
       "operatingSystem": "All",
-      "url": "https://chinesekeyboard.online/index.html",
+      "url": "https://chinesekeyboard.online/chinese-keyboard",
       "offers": {
         "@type": "Offer",
         "price": "0"
       },
       "featureList": [
         "Pinyin Input Method",
+        "Stroke Recognition",
+        "Character Conversion",
         "Copy Text to Clipboard",
         "Direct Google Search",
         "Direct YouTube Search",
@@ -42,7 +44,7 @@
       "url": "https://chinesekeyboard.online/",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://chinesekeyboard.online/index.html#?q={search_term_string}",
+        "target": "https://chinesekeyboard.online/chinese-keyboard#?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     }
@@ -59,6 +61,55 @@
             <button id="theme-toggle" class="theme-button">☀️ Light Mode</button>
         </header>
         
+        <!-- Mode Toggle Section -->
+        <section id="mode-toggle-section">
+            <div class="mode-toggle-container">
+                <button id="keyboard-mode-btn" class="mode-btn active">Keyboard Mode</button>
+                <button id="pinyin-mode-btn" class="mode-btn">Pinyin Mode</button>
+            </div>
+        </section>
+        
+        <!-- Pinyin Input Section -->
+        <section id="pinyin-section" class="hidden">
+            <div class="input-section">
+                <div class="input-wrapper">
+                    <textarea id="pinyin-input" placeholder="Type or paste Pinyin here (e.g. wo3 hao3 shi4 jie4)"></textarea>
+                </div>
+                <button id="convert-btn">Convert</button>
+            </div>
+            
+            <div class="output-section">
+                <div class="output-header">
+                    <h2>Chinese Output</h2>
+                    <div class="output-actions">
+                        <button id="pinyin-copy-btn" class="action-btn">Copy</button>
+                        <button id="pinyin-google-btn" class="action-btn">Google</button>
+                        <button id="pinyin-youtube-btn" class="action-btn">YouTube</button>
+                    </div>
+                </div>
+                <div id="chinese-output" class="output-display">
+                    <p class="placeholder">Chinese characters will appear here</p>
+                </div>
+                <!-- Vertical suggestions container -->
+                <div id="vertical-suggestions" class="vertical-suggestions hidden">
+                    <h3>Suggestions:</h3>
+                    <ul id="vertical-suggestions-list"></ul>
+                </div>
+            </div>
+            
+            <div class="instructions">
+                <h3>How to use:</h3>
+                <ul>
+                    <li>Type Pinyin with tone numbers (e.g., "ni3 hao3")</li>
+                    <li>Or type Pinyin without tones (e.g., "ni hao")</li>
+                    <li>Supports thousands of Chinese words and phrases</li>
+                    <li>Powered by the CC-CEDICT dictionary (120,000+ entries)</li>
+                    <li>Real-time suggestions as you type</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Keyboard Input Section -->
         <section id="input-section">
             <textarea id="text-input" placeholder="Start typing..."></textarea>
             <div class="action-buttons">
@@ -77,9 +128,9 @@
         </section>
         
         <section id="description-section">
-            <h2>Online Chinese Keyboard - Type in Chinese Without Software</h2>
-            <p>This virtual Chinese keyboard at chinesekeyboard.online allows you to type Chinese characters online without installing any software. Perfect for learning Mandarin, writing messages, or searching content in Chinese.</p>
-            <p>Our keyboard supports both Pinyin input method and direct character selection. Simply click on the keys to start typing in Chinese!</p>
+            <h2>Best Online Chinese Keyboard - Type in Chinese Without Software</h2>
+            <p>This free virtual Chinese keyboard at chinesekeyboard.online allows you to type Chinese characters online without installing any software. Perfect for learning Mandarin, writing messages, or searching content in Chinese.</p>
+            <p>Our Chinese keyboard tool supports both Pinyin input method and direct character selection. Simply click on the keys to start typing in Chinese with this easy-to-use online keyboard!</p>
             
             <h3>How to Use This Chinese Keyboard</h3>
             <p>Using our online Chinese keyboard is simple:</p>
@@ -98,6 +149,18 @@
                 <li><strong>Bilingual support</strong> - Shows both English letters and Chinese characters</li>
                 <li><strong>Dark mode</strong> - Easy on the eyes with light and dark themes</li>
                 <li><strong>SEO optimized</strong> - Built with search engines in mind for better discoverability</li>
+            </ul>
+            
+            <h3>Explore Our Other Chinese Tools</h3>
+            <p>We offer a variety of specialized tools to help you type, learn, and work with Chinese:</p>
+            <ul>
+                <li><a href="/pinyin-keyboard.html">Pinyin Keyboard</a> - Type Chinese using Pinyin input method</li>
+                <li><a href="/convert-pinyin-to-chinese.html">Pinyin to Chinese Converter</a> - Convert Pinyin text to Chinese characters</li>
+                <li><a href="/chinese-stroke-keyboard.html">Chinese Stroke Keyboard</a> - Write Chinese characters by stroke order</li>
+                <li><a href="/chinese-keyboard-mobile.html">Mobile Chinese Keyboard</a> - Optimized for smartphones and tablets</li>
+                <li><a href="/simplified-vs-traditional-chinese.html">Simplified vs Traditional Chinese</a> - Learn about character variants</li>
+                <li><a href="/how-to-type-in-chinese.html">How to Type in Chinese</a> - Complete typing tutorial</li>
+                <li><a href="/faq.html">FAQ & Privacy</a> - Answers to common questions and privacy policy</li>
             </ul>
         </section>
     </main>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Keyboard for Mobile - Chinese Keyboard App - chinesekeyboard.online</title>
+    <meta name="description" content="Mobile-friendly Chinese keyboard for typing Chinese characters on smartphones and tablets. Optimized touch interface for easy Chinese input on mobile devices.">
+    <meta name="keywords" content="chinese keyboard for mobile, chinese keyboard app, mobile chinese typing, chinese input on phone, mobile pinyin keyboard">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="拼.png">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Chinese Keyboard for Mobile - Chinese Keyboard App",
+      "description": "Mobile-friendly Chinese keyboard for typing Chinese characters on smartphones and tablets. Optimized touch interface for easy Chinese input on mobile devices.",
+      "applicationCategory": "BrowserApplication",
+      "operatingSystem": "All",
+      "url": "https://chinesekeyboard.online/chinese-keyboard-mobile",
+      "offers": {
+        "@type": "Offer",
+        "price": "0"
+      },
+      "featureList": [
+        "Mobile-Optimized Interface",
+        "Touch-Friendly Keys",
+        "Pinyin Input Method",
+        "Copy Text to Clipboard",
+        "Direct Google Search",
+        "Direct YouTube Search",
+        "Dark Mode Support"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://chinesekeyboard.online/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://chinesekeyboard.online/chinese-keyboard-mobile#?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+</head>
+<body>
+    <main class="main-content">
+        <header>
+            <div class="header-content">
+                <img src="拼.png" alt="Chinese Keyboard Logo" class="logo">
+                <h1>Chinese Keyboard for Mobile</h1>
+                <p>手机中文键盘</p>
+            </div>
+            <button id="theme-toggle" class="theme-button">☀️ Light Mode</button>
+        </header>
+        
+        <section id="mode-toggle-section">
+            <div class="mode-toggle-container">
+                <button id="keyboard-mode-btn" class="mode-btn active">Keyboard Mode</button>
+                <button id="pinyin-mode-btn" class="mode-btn">Pinyin Mode</button>
+            </div>
+        </section>
+        
+        <!-- Pinyin Input Section -->
+        <section id="pinyin-section" class="hidden">
+            <div class="input-section">
+                <div class="input-wrapper">
+                    <textarea id="pinyin-input" placeholder="Type or paste Pinyin here (e.g. wo3 hao3 shi4 jie4)"></textarea>
+                </div>
+                <button id="convert-btn">Convert</button>
+            </div>
+            
+            <div class="output-section">
+                <div class="output-header">
+                    <h2>Chinese Output</h2>
+                    <div class="output-actions">
+                        <button id="pinyin-copy-btn" class="action-btn">Copy</button>
+                        <button id="pinyin-google-btn" class="action-btn">Google</button>
+                        <button id="pinyin-youtube-btn" class="action-btn">YouTube</button>
+                    </div>
+                </div>
+                <div id="chinese-output" class="output-display">
+                    <p class="placeholder">Chinese characters will appear here</p>
+                </div>
+                <!-- Vertical suggestions container -->
+                <div id="vertical-suggestions" class="vertical-suggestions hidden">
+                    <h3>Suggestions:</h3>
+                    <ul id="vertical-suggestions-list"></ul>
+                </div>
+            </div>
+            
+            <div class="instructions">
+                <h3>How to use on Mobile:</h3>
+                <ul>
+                    <li>Type Pinyin with tone numbers (e.g., "ni3 hao3")</li>
+                    <li>Or type Pinyin without tones (e.g., "ni hao")</li>
+                    <li>Supports thousands of Chinese words and phrases</li>
+                    <li>Powered by the CC-CEDICT dictionary (120,000+ entries)</li>
+                    <li>Real-time suggestions as you type</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Keyboard Input Section -->
+        <section id="input-section">
+            <textarea id="text-input" placeholder="Start typing..."></textarea>
+            <div class="action-buttons">
+                <button id="copy-btn">📋 Copy Text</button>
+                <a id="google-search-btn" class="button-link" href="https://www.google.com/search?q=" target="_blank" rel="noopener noreferrer">🔍 Google Search</a>
+                <a id="youtube-search-btn" class="button-link" href="https://www.youtube.com/results?search_query=" target="_blank" rel="noopener noreferrer">▶️ YouTube Search</a>
+            </div>
+        </section>
+
+        <section id="keyboard-section">
+            <div id="keyboard"></div>
+        </section>
+
+        <section id="secondary-keyboard-section">
+            <div id="secondary-keyboard"></div>
+        </section>
+        
+        <section id="description-section">
+            <h2>Mobile Chinese Keyboard - Type Chinese on Your Smartphone</h2>
+            <p>Our mobile-optimized Chinese keyboard is designed specifically for smartphones and tablets. With larger touch targets and responsive design, typing Chinese on your mobile device has never been easier.</p>
+            
+            <h3>How to Use This Mobile Keyboard</h3>
+            <p>Using our mobile Chinese keyboard is simple:</p>
+            <ul>
+                <li>Switch between Keyboard Mode and Pinyin Mode using the toggle at the top</li>
+                <li>In Keyboard Mode, tap the keys to type common Chinese characters</li>
+                <li>In Pinyin Mode, type Pinyin and convert to Chinese characters</li>
+                <li>Copy your text with the "Copy Text" button</li>
+                <li>Search directly on Google or YouTube with your Chinese text</li>
+            </ul>
+            
+            <h3>Features of Our Mobile Keyboard</h3>
+            <p>Our mobile keyboard offers several advantages:</p>
+            <ul>
+                <li><strong>Touch-optimized</strong> - Larger keys designed for touchscreens</li>
+                <li><strong>Responsive design</strong> - Works on all mobile devices</li>
+                <li><strong>Dual input methods</strong> - Switch between keyboard and Pinyin input</li>
+                <li><strong>Free to use</strong> - No downloads or installations required</li>
+                <li><strong>Dark mode</strong> - Easy on the eyes with light and dark themes</li>
+            </ul>
+            
+            <h3>Explore Our Other Chinese Tools</h3>
+            <p>Access our full range of Chinese typing and learning tools:</p>
+            <ul>
+                <li><a href="/chinese-keyboard">Chinese Keyboard</a> - Main virtual keyboard with dual input methods</li>
+                <li><a href="/pinyin-keyboard">Pinyin Keyboard</a> - Type Chinese using Pinyin input method</li>
+                <li><a href="/convert-pinyin-to-chinese.html">Pinyin to Chinese Converter</a> - Convert Pinyin text to Chinese characters</li>
+                <li><a href="/chinese-stroke-keyboard.html">Chinese Stroke Keyboard</a> - Write Chinese characters by stroke order</li>
+                <li><a href="/simplified-vs-traditional-chinese.html">Simplified vs Traditional Chinese</a> - Learn about character variants</li>
+                <li><a href="/how-to-type-in-chinese.html">How to Type in Chinese</a> - Complete typing tutorial</li>
+                <li><a href="/faq.html">FAQ & Privacy</a> - Answers to common questions and privacy policy</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <img src="拼.png" alt="Chinese Keyboard Logo" class="footer-logo">
+            <p>&copy; 2025 Virtual Chinese Keyboard. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="pinyins/pinyin.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
